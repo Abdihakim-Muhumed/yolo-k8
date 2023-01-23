@@ -15,5 +15,7 @@ spec:
       containers:
         - name: client-container
           image: abdihakim3541/yolo:1.0.2
+          workingDir: /usr/src/app/client
+          command: ["npm", "start"]
           ports:
             - containerPort: 3000
