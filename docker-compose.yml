@@ -1,0 +1,39 @@
+version: '3.7'
+
+services:
+  # MongoDB microservice
+  mongo_db:
+    container_name: db_container
+    image: mongo:latest
+    restart: always
+    volumes:
+      - mongo_db:/data/db
+
+    
+  #client microservice
+  client:
+    container_name: client_container
+    build: .
+    image: abdihakim3541/yolo:1.0.1
+    working_dir: /usr/src/app/client
+    command: npm start
+    ports:
+      - 3000:3000
+    stdin_open: true
+
+  #Backend microservice
+  backend:
+    container_name: backend_container
+    build: .
+    image: abdihakim3541/yolo:1.0.2
+    working_dir: /usr/src/app/backend
+    command: npm start
+    ports:
+      - 5000:5000
+    environment:
+      - MONGODB_URI=mongodb://mongo_db/27017
+    depends_on:
+      - mongo_db
+
+volumes:
+  mongo_db: {}
