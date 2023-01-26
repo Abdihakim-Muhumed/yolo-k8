@@ -1,9 +1,22 @@
+# Yolo-k8s
+This is a simple ecommerce website developed on the MERN Stack.
+The Project was then dockerized and deployed on Kubernetes.
+
+# Technologies
+1. Docker
+2. Kubernetes
+3. Google cloud Platform
+4. Google Kubernetes Engine
+
+
+# Run on Local Machine
 ## Requirements
 Make sure that you have the following installed:
 - [node](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04) 
 - npm 
 - [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/) and start the mongodb service with `sudo service mongod start`
-
+## Clone the repository
+    `git clone 
 ## Navigate to the Client Folder 
  `cd client`
 
