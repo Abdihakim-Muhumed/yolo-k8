@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-pod
+  name: backend
 spec:
   replicas: 2
   selector:
@@ -21,5 +21,4 @@ spec:
             - containerPort: 5000
           env:
             - name: MONGODB_URI
-              value: "mongodb://mongodb-0.mongodb-service,mongodb-1.mongodb-service:27017/"
-          
+              value: "mongodb://mongodb-0:30609,mongodb-1:32731/"
