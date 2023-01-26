@@ -9,7 +9,7 @@ This was used to deploy the client and backend side of the project since both we
 This was used to deploy the mongodb database for the application as it was a stateful database that needed to store products and cart details.
 
 ## Exposing the pods/deployments
-The pods were exposed using a LoadBalancer type of service that is provided by the GKE
+The pods were exposed using a LoadBalancer type of service that is provided by the GKE.
 
 ## Persistent Storage
 Kubernetes' VolumeClaimTemplates were used so as to provide a persistent storage for mongodb database.

@@ -8,6 +8,8 @@ The Project was then dockerized and deployed on Kubernetes.
 3. Google cloud Platform
 4. Google Kubernetes Engine
 
+# Demo
+[View Live Site] (http://34.149.94.142/)
 
 # Run on Local Machine
 ## Requirements
