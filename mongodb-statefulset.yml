@@ -15,7 +15,6 @@ spec:
         role: mongo
         component: database
     spec:
-      terminationGracePeriodSeconds: 40
       containers:
         - name: mongodb-container
           image: mongo:latest
@@ -29,11 +28,6 @@ spec:
           volumeMounts:
             - name: mongo-persistent-storage
               mountPath: /data/db
-        - name: mongodb-sidecar
-          image: cvallance/mongo-k8s-sidecar
-          env:
-            - name: MONGO_SIDECAR_POD_LABELS
-              value: "role=mongo,component=database"
   volumeClaimTemplates:
       - metadata:
           name: mongo-persistent-storage
